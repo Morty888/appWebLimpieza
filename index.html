@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CleanMaster - Servicios Profesionales de Limpieza</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <style>
+        .bg-primary {
+            background-color: #a7d0f2;
+        }
+        .text-primary {
+            color: #2c5282;
+        }
+        .border-primary {
+            border-color: #2c5282;
+        }
+        .hover\:bg-primary-dark:hover {
+            background-color: #90b8d9;
+        }
+        .calendar-container .flatpickr-calendar {
+            margin: 0 auto;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header -->
+    <header class="bg-primary py-4 shadow-md">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-broom text-3xl text-primary mr-3"></i>
+                <h1 class="text-2xl font-bold text-primary">Servicios de Limpieza</h1>
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="#services" class="text-primary hover:text-blue-900 font-medium">Servicios</a></li>
+                    <li><a href="#how-it-works" class="text-primary hover:text-blue-900 font-medium">Cómo funciona</a></li>
+                    <li><a href="#testimonials" class="text-primary hover:text-blue-900 font-medium">Clientes</a></li>
+                    <li><a href="#contact" class="text-primary hover:text-blue-900 font-medium">Contacto</a></li>
+                </ul>
+            </nav>
+            <button class="md:hidden text-primary text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-100 to-primary py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6">Limpieza Profesional a Tu Medida</h2>
+            <p class="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">Servicios de limpieza de alta calidad para hogares, oficinas y negocios. Deja que nos encarguemos de la limpieza mientras tú te ocupas de lo importante.</p>
+            <a href="#booking" class="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 inline-block">Reservar Ahora</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-primary mb-12">Nuestros Servicios</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card bg-white p-6 rounded-lg shadow-md border border-gray-200 transition duration-300">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-home text-4xl text-primary mb-3"></i>
+                        <h3 class="text-xl font-semibold text-primary mb-2">Limpieza de Hogares</h3>
+                        <p class="text-gray-600">Limpieza completa de todas las áreas de tu hogar, incluyendo dormitorios, baños, cocina y áreas comunes.</p>
+                    </div>
+                </div>
+                <div class="service-card bg-white p-6 rounded-lg shadow-md border border-gray-200 transition duration-300">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-building text-4xl text-primary mb-3"></i>
+                        <h3 class="text-xl font-semibold text-primary mb-2">Limpieza de Oficinas</h3>
+                        <p class="text-gray-600">Mantenimiento profesional de espacios de trabajo para crear un ambiente productivo y saludable.</p>
+                    </div>
+                </div>
+                <div class="service-card bg-white p-6 rounded-lg shadow-md border border-gray-200 transition duration-300">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-utensils text-4xl text-primary mb-3"></i>
+                        <h3 class="text-xl font-semibold text-primary mb-2">Limpieza de Restaurantes</h3>
+                        <p class="text-gray-600">Servicio especializado para cumplir con los más altos estándares de higiene en el sector gastronómico.</p>
+                    </div>
+                </div>
+                <div class="service-card bg-white p-6 rounded-lg shadow-md border border-gray-200 transition duration-300">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-glass-cheers text-4xl text-primary mb-3"></i>
+                        <h3 class="text-xl font-semibold text-primary mb-2">Eventos</h3>
+                        <p class="text-gray-600">Limpieza antes, durante y después de eventos para que solo te preocupes por disfrutar.</p>
+                    </div>
+                </div>
+                <div class="service-card bg-white p-6 rounded-lg shadow-md border border-gray-200 transition duration-300">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-broom text-4xl text-primary mb-3"></i>
+                        <h3 class="text-xl font-semibold text-primary mb-2">Limpieza Profunda</h3>
+                        <p class="text-gray-600">Servicio exhaustivo que incluye áreas de difícil acceso y limpieza de detalles que normalmente se pasan por alto.</p>
+                    </div>
+                </div>
+                <div class="service-card bg-white p-6 rounded-lg shadow-md border border-gray-200 transition duration-300">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-calendar text-4xl text-primary mb-3"></i>
+                        <h3 class="text-xl font-semibold text-primary mb-2">Servicio Personalizado</h3>
+                        <p class="text-gray-600">¿Necesitas algo específico? Crea un paquete de limpieza adaptado exactamente a tus necesidades.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section id="booking" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-primary p-8 text-white">
+                        <h2 class="text-3xl font-bold mb-4">Reserva tu servicio</h2>
+                        <p class="mb-6">Completa el formulario y nos pondremos en contacto contigo para confirmar los detalles de tu reserva.</p>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-check-circle text-xl mr-3"></i>
+                            <span>Profesionales certificados</span>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-check-circle text-xl mr-3"></i>
+                            <span>Productos ecológicos</span>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-check-circle text-xl mr-3"></i>
+                            <span>Satisfacción garantizada</span>
+                        </div>
+                        <div class="mt-8">
+                            <h3 class="text-xl font-semibold mb-2">¿Tienes preguntas?</h3>
+                            <p class="mb-2"><i class="fas fa-phone mr-2"></i> +1 234 567 890</p>
+                            <p><i class="fas fa-envelope mr-2"></i> info@cleanmaster.com</p>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-8">
+                        <form id="bookingForm" class="space-y-6">
+                            <div>
+                                <label for="serviceType" class="block text-gray-700 font-medium mb-2">Tipo de servicio</label>
+                                <select id="serviceType" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                                    <option value="">Selecciona un servicio</option>
+                                    <option value="home">Limpieza de Hogares</option>
+                                    <option value="office">Limpieza de Oficinas</option>
+                                    <option value="restaurant">Limpieza de Restaurantes</option>
+                                    <option value="events">Eventos</option>
+                                    <option value="deep">Limpieza Profunda</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="bookingDate" class="block text-gray-700 font-medium mb-2">Fecha del servicio</label>
+                                <input id="bookingDate" type="text" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary calendar-container" placeholder="Selecciona una fecha">
+                            </div>
+                            <div>
+                                <label for="duration" class="block text-gray-700 font-medium mb-2">Duración (horas)</label>
+                                <select id="duration" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                                    <option value="1">1 hora</option>
+                                    <option value="2">2 horas</option>
+                                    <option value="3">3 horas</option>
+                                    <option value="4">4 horas</option>
+                                    <option value="5">5+ horas</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Nombre completo</label>
+                                <input id="name" type="text" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Tu nombre">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Correo electrónico</label>
+                                <input id="email" type="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="tu@email.com">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">Teléfono</label>
+                                <input id="phone" type="tel" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="+1 234 567 890">
+                            </div>
+                            <div>
+                                <label for="notes" class="block text-gray-700 font-medium mb-2">Notas adicionales</label>
+                                <textarea id="notes" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Detalles especiales, instrucciones de acceso, etc."></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-primary hover:bg-primary-dark text-white font-bold py-3 px-4 rounded-md transition duration-300">
+                                Solicitar servicio
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-primary mb-12">Cómo Funciona</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-primary rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-calendar-check text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary mb-2">1. Reserva</h3>
+                    <p class="text-gray-600">Selecciona el tipo de servicio, fecha y hora que mejor se adapte a tus necesidades.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-primary rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-user-check text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary mb-2">2. Confirmación</h3>
+                    <p class="text-gray-600">Recibirás una confirmación con los detalles de tu reserva y el perfil de tu profesional asignado.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-primary rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-broom text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary mb-2">3. Limpieza</h3>
+                    <p class="text-gray-600">Nuestro equipo llegará puntual y equipado para dejar tu espacio impecable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-primary mb-12">Lo que dicen nuestros clientes</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-primary rounded-full w-12 h-12 flex items-center justify-center text-white font-bold mr-3">JM</div>
+                        <div>
+                            <h4 class="font-semibold">Juan Martínez</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Contraté la limpieza profunda para mi casa y quedé impresionado. Cada rincón quedó impecable, incluso áreas que normalmente no se limpian. ¡Altamente recomendados!"</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-primary rounded-full w-12 h-12 flex items-center justify-center text-white font-bold mr-3">AG</div>
+                        <div>
+                            <h4 class="font-semibold">Ana González</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Como dueña de restaurante, la higiene es fundamental. CleanMaster entiende perfectamente las necesidades del sector y cumple con todos los protocolos."</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-primary rounded-full w-12 h-12 flex items-center justify-center text-white font-bold mr-3">LS</div>
+                        <div>
+                            <h4 class="font-semibold">Laura Sánchez</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"El servicio semanal para mi oficina ha mejorado notablemente el ambiente de trabajo. Puntuales, discretos y muy profesionales. No podría estar más satisfecha."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-primary mb-12">Contáctanos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold text-primary mb-4">Información de contacto</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-primary text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Dirección</h4>
+                                <p class="text-gray-600">Calle Limpieza 123, Ciudad Limpia</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-phone-alt text-primary text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Teléfono</h4>
+                                <p class="text-gray-600">+1 234 567 890</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope text-primary text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Email</h4>
+                                <p class="text-gray-600">info@cleanmaster.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-clock text-primary text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Horario</h4>
+                                <p class="text-gray-600">Lunes a Viernes: 8:00 - 20:00<br>Sábados: 9:00 - 15:00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <h3 class="text-xl font-semibold text-primary mb-4">Síguenos</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-primary hover:bg-primary-dark text-white rounded-full w-10 h-10 flex items-center justify-center">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-primary hover:bg-primary-dark text-white rounded-full w-10 h-10 flex items-center justify-center">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="bg-primary hover:bg-primary-dark text-white rounded-full w-10 h-10 flex items-center justify-center">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="bg-primary hover:bg-primary-dark text-white rounded-full w-10 h-10 flex items-center justify-center">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-primary mb-4">Envía un mensaje</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="contactName" class="block text-gray-700 font-medium mb-2">Nombre</label>
+                            <input id="contactName" type="text" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div>
+                            <label for="contactEmail" class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input id="contactEmail" type="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div>
+                            <label for="contactSubject" class="block text-gray-700 font-medium mb-2">Asunto</label>
+                            <input id="contactSubject" type="text" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div>
+                            <label for="contactMessage" class="block text-gray-700 font-medium mb-2">Mensaje</label>
+                            <textarea id="contactMessage" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                        </div>
+                        <button type="submit" class="bg-primary hover:bg-primary-dark text-white font-bold py-2 px-6 rounded-md transition duration-300">
+                            Enviar mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">CleanMaster</h3>
+                    <p>Servicios profesionales de limpieza para hogares y negocios. Calidad garantizada y satisfacción del cliente como prioridad.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Servicios</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:underline">Limpieza de Hogares</a></li>
+                        <li><a href="#" class="hover:underline">Limpieza de Oficinas</a></li>
+                        <li><a href="#" class="hover:underline">Limpieza de Restaurantes</a></li>
+                        <li><a href="#" class="hover:underline">Eventos</a></li>
+                        <li><a href="#" class="hover:underline">Limpieza Profunda</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Enlaces útiles</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:underline">Preguntas frecuentes</a></li>
+                        <li><a href="#" class="hover:underline">Política de privacidad</a></li>
+                        <li><a href="#" class="hover:underline">Términos y condiciones</a></li>
+                        <li><a href="#" class="hover:underline">Trabaja con nosotros</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Suscríbete</h4>
+                    <p class="mb-4">Recibe ofertas especiales y consejos de limpieza.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Tu email" class="px-4 py-2 rounded-l-md w-full text-gray-800 focus:outline-none">
+                        <button type="submit" class="bg-blue-800 hover:bg-blue-900 px-4 py-2 rounded-r-md">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-blue-200 mt-8 pt-6 text-center">
+                <p>&copy; 2023 CleanMaster. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="successModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg p-8 max-w-md mx-4">
+            <div class="text-center">
+                <div class="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-check text-green-500 text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-2">¡Gracias!</h3>
+                <p class="text-gray-600 mb-6">Hemos recibido tu solicitud. Contactaremos contigo en breve para confirmar los detalles de tu reserva.</p>
+                <button id="closeModal" class="bg-primary hover:bg-primary-dark text-white font-bold py-2 px-6 rounded-md transition duration-300">
+                    Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize calendar
+        flatpickr("#bookingDate", {
+            minDate: "today",
+            dateFormat: "d/m/Y",
+            locale: "es",
+            disable: [
+                function(date) {
+                    // Disable Sundays
+                    return (date.getDay() === 0);
+                }
+            ]
+        });
+
+        // Form submission
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const serviceType = document.getElementById('serviceType').value;
+            const bookingDate = document.getElementById('bookingDate').value;
+            const duration = document.getElementById('duration').value;
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const notes = document.getElementById('notes').value;
+            
+            // Here you would typically send this data to your server/email service
+            console.log('Form submitted:', {
+                serviceType,
+                bookingDate,
+                duration,
+                name,
+                email,
+                phone,
+                notes
+            });
+            
+            // Show success modal
+            document.getElementById('successModal').classList.remove('hidden');
+            
+            // Reset form
+            this.reset();
+        });
+        
+        // Close modal
+        document.getElementById('closeModal').addEventListener('click', function() {
+            document.getElementById('successModal').classList.add('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
