@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CleanMaster - Servicios Profesionales de Limpieza</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <style>
+        .bg-primary {
+            background-color: #a7d0f2;
+        }
+
+        .text-primary {
+            color: #2c5282;
+        }
+
+        .border-primary {
+            border-color: #2c5282;
+        }
+
+        .hover\:bg-primary-dark:hover {
+            background-color: #90b8d9;
+        }
+
+        .calendar-container .flatpickr-calendar {
+            margin: 0 auto;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-gray-50">
+
+    <!-- Header y Menú -->
+
+    <!-- Menú web-->
+    <header class="bg-primary py-4 shadow-md relative">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-broom text-3xl text-primary mr-3"></i>
+                <h1 class="text-2xl font-bold text-primary">Servicios de Limpieza</h1>
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li>
+                        <a href="index.html"
+                            class="text-primary hover:text-blue-900 font-medium flex items-center space-x-1">
+                            <i class="fas fa-home"></i>
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="reserva.html"
+                            class="text-primary hover:text-blue-900 font-medium flex items-center space-x-1">
+                            <i class="fas fa-calendar-check"></i>
+                            <span>Reserva</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contacto.html"
+                            class="text-primary hover:text-blue-900 font-medium flex items-center space-x-1">
+                            <i class="fas fa-envelope"></i>
+                            <span>Contacto</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <button id="menuToggle" class="md:hidden text-primary text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Fondo oscuro (overlay) -->
+        <div id="menuOverlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40"></div>
+
+
+        <!-- Menú móvil lateral-->
+        <div id="mobileMenu"
+            class="fixed top-0 right-0 h-full w-1/2 bg-blue-900 text-white transform translate-x-full transition-transform duration-300 ease-in-out z-50 shadow-lg flex flex-col">
+            <!-- Botón cerrar menú-->
+            <div class="flex justify-end p-4">
+                <button id="closeMenu" class="text-white text-3xl">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Enlaces del menú móvil (botones con icono)-->
+            <ul class="flex flex-col items-center space-y-6 px-4 pb-10">
+                <li>
+                    <a href="index.html"
+                        class="flex flex-col items-center bg-blue-200 hover:bg-blue-300 text-white rounded-xl p-6 w-40 h-40 justify-center shadow-lg">
+                        <i class="fas fa-home text-4xl mb-2 text-white"></i>
+                        <span class="text-lg font-semibold text-white">Inicio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="reserva.html"
+                        class="flex flex-col items-center bg-blue-200 hover:bg-blue-300 text-white rounded-xl p-6 w-40 h-40 justify-center shadow-lg">
+                        <i class="fas fa-calendar-check text-4xl mb-2 text-white"></i>
+                        <span class="text-lg font-semibold text-white">Reserva</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="contacto.html"
+                        class="flex flex-col items-center bg-blue-200 hover:bg-blue-300 text-white rounded-xl p-6 w-40 h-40 justify-center shadow-lg">
+                        <i class="fas fa-envelope text-4xl mb-2 text-white"></i>
+                        <span class="text-lg font-semibold text-white">Contacto</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+
+    <!-- Contacto Seccion -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-primary mb-12">Contáctanos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold text-primary mb-4">Información de contacto</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-primary text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Dirección</h4>
+                                <p class="text-gray-600">Calle Limpieza 123, Ciudad Limpia</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-phone-alt text-primary text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Teléfono</h4>
+                                <p class="text-gray-600">+1 234 567 890</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope text-primary text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Email</h4>
+                                <p class="text-gray-600">info@cleanmaster.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-clock text-primary text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Horario</h4>
+                                <p class="text-gray-600">Lunes a Viernes: 8:00 - 20:00<br>Sábados: 9:00 - 15:00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <h3 class="text-xl font-semibold text-primary mb-4">Síguenos</h3>
+                        <div class="flex space-x-4">
+                            <a href="#"
+                                class="bg-primary hover:bg-primary-dark text-white rounded-full w-10 h-10 flex items-center justify-center">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#"
+                                class="bg-primary hover:bg-primary-dark text-white rounded-full w-10 h-10 flex items-center justify-center">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#"
+                                class="bg-primary hover:bg-primary-dark text-white rounded-full w-10 h-10 flex items-center justify-center">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#"
+                                class="bg-primary hover:bg-primary-dark text-white rounded-full w-10 h-10 flex items-center justify-center">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-primary mb-4">Envía un mensaje</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="contactName" class="block text-gray-700 font-medium mb-2">Nombre</label>
+                            <input id="contactName" type="text"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div>
+                            <label for="contactEmail" class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input id="contactEmail" type="email"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div>
+                            <label for="contactSubject" class="block text-gray-700 font-medium mb-2">Asunto</label>
+                            <input id="contactSubject" type="text"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div>
+                            <label for="contactMessage" class="block text-gray-700 font-medium mb-2">Mensaje</label>
+                            <textarea id="contactMessage" rows="4"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="bg-primary hover:bg-primary-dark text-white font-bold py-2 px-6 rounded-md transition duration-300">
+                            Enviar mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">CleanMaster</h3>
+                    <p>Servicios profesionales de limpieza para hogares y negocios. Calidad garantizada y satisfacción
+                        del cliente como prioridad.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Servicios</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:underline">Limpieza de Hogares</a></li>
+                        <li><a href="#" class="hover:underline">Limpieza de Oficinas</a></li>
+                        <li><a href="#" class="hover:underline">Limpieza de Restaurantes</a></li>
+                        <li><a href="#" class="hover:underline">Eventos</a></li>
+                        <li><a href="#" class="hover:underline">Limpieza Profunda</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Enlaces útiles</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:underline">Preguntas frecuentes</a></li>
+                        <li><a href="#" class="hover:underline">Política de privacidad</a></li>
+                        <li><a href="#" class="hover:underline">Términos y condiciones</a></li>
+                        <li><a href="#" class="hover:underline">Trabaja con nosotros</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Suscríbete</h4>
+                    <p class="mb-4">Recibe ofertas especiales y consejos de limpieza.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Tu email"
+                            class="px-4 py-2 rounded-l-md w-full text-gray-800 focus:outline-none">
+                        <button type="submit" class="bg-blue-800 hover:bg-blue-900 px-4 py-2 rounded-r-md">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-blue-200 mt-8 pt-6 text-center">
+                <p>&copy; 2023 CleanMaster. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"> </script>
+
+</body>
+
+</html>
